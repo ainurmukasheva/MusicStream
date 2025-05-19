@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const userProfileElement = document.getElementById('user-profile');
   const userData = JSON.parse(localStorage.getItem('loggedInUser'));
 
-  if (mobileUserNameElement && userData.name) {
+  if (mobileUserNameElement && userData && userData.name) {
     mobileUserNameElement.textContent = userData.name;
 
     const logoutBtn = document.querySelector('.logout-btn');
