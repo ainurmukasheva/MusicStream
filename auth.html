@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicStream - авторизация</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Android Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png" />
+
+    <!-- Web Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body class="dark-theme auth-page">
+    <div class="auth-container">
+      <div class="auth-header">
+        <div class="logo">
+          <h1>MusicStream</h1>
+        </div>
+      </div>
+
+      <div class="auth-content">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Авторизация</button>
+          <button class="auth-tab" data-tab="signup">Регистрация</button>
+        </div>
+
+        <!-- Login Form -->
+        <div class="auth-form login-form active">
+          <h2>Авторизация MusicStream</h2>
+
+          <div class="social-login">
+            <button class="social-btn google">
+              <i class="fab fa-google"></i>
+              <span>Google</span>
+            </button>
+            <button class="social-btn facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span>Facebook</span>
+            </button>
+          </div>
+
+          <div class="divider">
+            <span>или</span>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="login-email">Почта</label>
+              <input type="text" id="login-email" placeholder="Введите email" />
+            </div>
+
+            <div class="form-group">
+              <label for="login-password">Пароль</label>
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Введите пароль" />
+            </div>
+
+            <button type="submit" class="auth-submit-btn">Войти</button>
+          </form>
+
+          <div class="auth-footer">
+            <p>
+              Нет аккаунта?
+              <button class="switch-tab" data-tab="signup">
+                Зарегистрироваться
+              </button>
+            </p>
+          </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="auth-form signup-form">
+          <h2>Зарегистрируйтесь, чтобы слушать музыку</h2>
+
+          <div class="social-login">
+            <button class="social-btn google">
+              <i class="fab fa-google"></i>
+              <span>Google</span>
+            </button>
+            <button class="social-btn facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span>Facebook</span>
+            </button>
+          </div>
+
+          <div class="divider">
+            <span>или</span>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="signup-email">Почта</label>
+              <input
+                type="email"
+                id="signup-email"
+                placeholder="Введите email" />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-password">Пароль</label>
+              <input
+                type="password"
+                id="signup-password"
+                placeholder="Введите пароль" />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-name">Как вас называть?</label>
+              <input type="text" id="signup-name" placeholder="Введите имя" />
+              <span class="form-hint">Это имя отобразиться в профиле</span>
+            </div>
+
+            <div class="form-group terms">
+              <input type="checkbox" id="terms" />
+              <label for="terms"
+                >Я соглашаюсь с
+                <a href="404.html">Политикой конфиденциальности</a> и
+                <a href="404.html">Правилами использования сервиса</a>.</label
+              >
+            </div>
+
+            <button type="submit" class="auth-submit-btn">
+              Зарегистрироваться
+            </button>
+          </form>
+
+          <div class="auth-footer">
+            <p>
+              Уже есть аккаунт?
+              <button class="switch-tab" data-tab="login">Войти</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,355 @@
+/* Artist Page Styles */
+.artist-header {
+  margin-bottom: 24px;
+}
+
+.artist-banner {
+  height: 340px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  position: relative;
+}
+
+.artist-header-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+  padding: 80px 32px 32px;
+  border-radius: 0 0 8px 8px;
+}
+
+.artist-header-content {
+  max-width: 800px;
+}
+
+.artist-verified {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.artist-verified i {
+  color: var(--accent-color);
+  margin-right: 8px;
+}
+
+.artist-header h1 {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.artist-stats {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.artist-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 0 32px;
+}
+
+.artist-actions-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.follow-btn {
+  background-color: transparent;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-primary);
+  padding: 8px 24px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.follow-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--hover-bg);
+}
+
+.artist-bio {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 48px;
+  padding: 0 32px;
+}
+
+.bio-content {
+  flex: 1;
+}
+
+.bio-content h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.bio-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.bio-text p {
+  margin-bottom: 16px;
+}
+
+.bio-stats {
+  display: flex;
+  gap: 32px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.bio-image {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.bio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.photo-gallery-section {
+  margin-bottom: 48px;
+  padding: 0 32px;
+}
+
+.photo-gallery-section h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.gallery-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item {
+  flex: 0 0 calc(100% / 3);
+  padding: 0 8px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.03);
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-elevated);
+  border: none;
+  color: var(--text-primary);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: background-color 0.2s;
+}
+
+.gallery-arrow:hover {
+  background-color: var(--hover-bg);
+}
+
+.gallery-arrow.prev-arrow {
+  left: -20px;
+}
+
+.gallery-arrow.next-arrow {
+  right: -20px;
+}
+
+.popular-tracks-section {
+  margin-bottom: 48px;
+  padding: 0 32px;
+}
+
+.popular-tracks-section h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.track-plays {
+  width: 120px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.track-actions {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.discography-section {
+  margin-bottom: 48px;
+  padding: 0 32px;
+}
+
+.discography-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.discography-filters {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: var(--hover-bg);
+}
+
+.filter-btn.active {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.similar-artists-section,
+.appears-on-section {
+  margin-bottom: 48px;
+  padding: 0 32px;
+}
+
+/* Responsive adjustments for artist page */
+@media (max-width: 1200px) {
+  .gallery-item {
+    flex: 0 0 calc(100% / 2);
+  }
+
+  .artist-header h1 {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .artist-bio {
+    flex-direction: column-reverse;
+  }
+  .bio-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .track-plays {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 0 0 100%;
+  }
+
+  .artist-header h1 {
+    font-size: 42px;
+  }
+
+  .bio-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .discography-section .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .artist-header-overlay {
+    padding: 60px 16px 16px;
+  }
+
+  .artist-header h1 {
+    font-size: 32px;
+  }
+
+  .artist-actions {
+    padding: 0 16px;
+  }
+
+  .artist-bio,
+  .photo-gallery-section,
+  .popular-tracks-section,
+  .discography-section,
+  .similar-artists-section,
+  .appears-on-section {
+    padding: 0 16px;
+  }
+}

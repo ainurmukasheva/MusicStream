@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicStream - платформа для прослушивания музыки</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Android Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png" />
+
+    <!-- Web Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body class="dark-theme">
+    <div class="app-container">
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar">
+        <div class="logo">
+          <h1>MusicStream</h1>
+        </div>
+        <ul class="nav-links">
+          <li class="active">
+            <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+          </li>
+          <li>
+            <a href="browse.html"><i class="fas fa-search"></i> Поиск</a>
+          </li>
+          <li>
+            <a href="stats.html"
+              ><i class="fas fa-chart-line"></i> Статистика</a
+            >
+          </li>
+          <li>
+            <a href="liked-songs.html"
+              ><i class="fas fa-heart"></i> Избранное</a
+            >
+          </li>
+        </ul>
+        <div class="theme-toggle">
+          <span>Тема</span>
+          <label class="switch">
+            <input type="checkbox" class="theme-toggle-buttons" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="top-bar">
+          <div class="logo">
+            <h1>MS</h1>
+          </div>
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Поиск" />
+          </div>
+          <div class="user-menu">
+            <div class="user-profile" id="user-profile">
+              <i class="fas fa-user"></i>
+              <span id="user-name">Гость</span>
+            </div>
+          </div>
+          <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </header>
+
+        <div class="mobile-menu">
+          <div class="close-menu">
+            <i class="fas fa-close"></i>
+          </div>
+          <div class="mobile-menu-item user-profile" id="mobile-profile">
+            <i class="fas fa-user"></i>
+            <span id="mobile-user-name">Гость</span>
+          </div>
+          <div class="mobile-menu-item">
+            <button class="logout-btn">
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Выйти</span>
+            </button>
+          </div>
+          <div class="mobile-menu-item">
+            <div class="theme-toggle">
+              <span>Тема</span>
+              <label class="switch">
+                <input type="checkbox" class="theme-toggle-buttons" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-area">
+          <section class="welcome-section">
+            <h2>Подборка для вас</h2>
+            <div class="quick-links">
+              <a href="404.html" class="quick-link-item">
+                <img src="https://picsum.photos/80" alt="Liked Songs" />
+                <span>Любимое</span>
+              </a>
+              <a href="404.html" class="quick-link-item">
+                <img
+                  src="https://picsum.photos/80?random=1"
+                  alt="Daily Mix 1" />
+                <span>Разное</span>
+              </a>
+              <a href="404.html" class="quick-link-item">
+                <img
+                  src="https://picsum.photos/80?random=2"
+                  alt="Discover Weekly" />
+                <span>Новое</span>
+              </a>
+              <a href="404.html" class="quick-link-item">
+                <img src="https://picsum.photos/80?random=3" alt="Top Hits" />
+                <span>Хиты</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="top-artists-section">
+            <div class="section-header">
+              <h2>Популярные артисты</h2>
+              <button class="see-all-btn">Все</button>
+            </div>
+            <div class="artists-grid">
+              <a href="artist.html" class="artist-card">
+                <div class="artist-image">
+                  <img
+                    src="https://picsum.photos/seed/artist1/180"
+                    alt="Lana Velour"
+                    class="rounded-img" />
+                  <div class="play-overlay">
+                    <button class="play-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <h3>Lana Velour</h3>
+                <p>Альт-поп с элементами ретро и соула</p>
+              </a>
+
+              <a href="artist.html" class="artist-card">
+                <div class="artist-image">
+                  <img
+                    src="https://picsum.photos/seed/artist2/180"
+                    alt="Neon Drift"
+                    class="rounded-img" />
+                  <div class="play-overlay">
+                    <button class="play-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <h3>Neon Drift</h3>
+                <p>Электронный дуэт с атмосферным звучанием</p>
+              </a>
+
+              <a href="artist.html" class="artist-card">
+                <div class="artist-image">
+                  <img
+                    src="https://picsum.photos/seed/artist3/180"
+                    alt="The Oak Leaves"
+                    class="rounded-img" />
+                  <div class="play-overlay">
+                    <button class="play-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <h3>The Oak Leaves</h3>
+                <p>Инди-группа с тёплым гитарным звучанием</p>
+              </a>
+
+              <a href="artist.html" class="artist-card">
+                <div class="artist-image">
+                  <img
+                    src="https://picsum.photos/seed/artist4/180"
+                    alt="Eva Ray"
+                    class="rounded-img" />
+                  <div class="play-overlay">
+                    <button class="play-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <h3>Eva Ray</h3>
+                <p>Молодая исполнительница в жанре R&B</p>
+              </a>
+
+              <div class="artist-card">
+                <div class="artist-image">
+                  <img
+                    src="https://picsum.photos/seed/artist5/180"
+                    alt="Miles Orion"
+                    class="rounded-img" />
+                  <div class="play-overlay">
+                    <button class="play-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <h3>Miles Orion</h3>
+                <p>Классический вокал с современным подходом</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="featured-section">
+            <div class="section-header">
+              <h2>Плейлисты</h2>
+              <button class="see-all-btn">Все</button>
+            </div>
+
+            <div class="playlist-grid">
+              <a href="404.html" class="playlist-slide">
+                <div class="playlist-card">
+                  <div class="playlist-image gradient-green">
+                    <div class="playlist-text">
+                      <i class="fas fa-chart-line"></i>
+                      <span>Top Hits</span>
+                    </div>
+                    <div class="play-overlay">
+                      <button class="play-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="playlist-text-container">
+                    <h3>Today's Top Hits</h3>
+                    <p>The hottest tracks right now</p>
+                  </div>
+                </div>
+              </a>
+              <a href="404.html" class="playlist-slide">
+                <div class="playlist-card">
+                  <div class="playlist-image gradient-purple">
+                    <div class="playlist-text">
+                      <i class="fas fa-music"></i>
+                      <span>RapCaviar</span>
+                    </div>
+                    <div class="play-overlay">
+                      <button class="play-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="playlist-text-container">
+                    <h3>RapCaviar</h3>
+                    <p>New music from top artists</p>
+                  </div>
+                </div>
+              </a>
+              <a href="404.html" class="playlist-slide">
+                <div class="playlist-card">
+                  <div class="playlist-image gradient-orange">
+                    <div class="playlist-text">
+                      <i class="fas fa-guitar"></i>
+                      <span>Rock</span>
+                    </div>
+                    <div class="play-overlay">
+                      <button class="play-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="playlist-text-container">
+                    <h3>Rock Classics</h3>
+                    <p>
+                      Rock legends & epic songs that defined generations of
+                      music lovers
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="404.html" class="playlist-slide">
+                <div class="playlist-card">
+                  <div class="playlist-image gradient-blue">
+                    <div class="playlist-text">
+                      <i class="fas fa-headphones"></i>
+                      <span>Chill</span>
+                    </div>
+                    <div class="play-overlay">
+                      <button class="play-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="playlist-text-container">
+                    <h3>Chill Hits</h3>
+                    <p>Kick back to the best new chill hits</p>
+                  </div>
+                </div>
+              </a>
+              <a href="404.html" class="playlist-slide">
+                <div class="playlist-card">
+                  <div class="playlist-image gradient-lightblue">
+                    <div class="playlist-text">
+                      <i class="fas fa-compact-disc"></i>
+                      <span>Indie</span>
+                    </div>
+                    <div class="play-overlay">
+                      <button class="play-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="playlist-text-container">
+                    <h3>Indie Mix</h3>
+                    <p>The best indie tracks of the moment</p>
+                  </div>
+                </div>
+              </a>
+              <a href="404.html" class="playlist-slide">
+                <div class="playlist-card">
+                  <div class="playlist-image gradient-pink">
+                    <div class="playlist-text">
+                      <i class="fas fa-volume-up"></i>
+                      <span>Dance</span>
+                    </div>
+                    <div class="play-overlay">
+                      <button class="play-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="playlist-text-container">
+                    <h3>Dance Party</h3>
+                    <p>Move your feet to these beats</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section class="new-releases-section">
+            <div class="section-header">
+              <h2>Новые треки</h2>
+              <button class="see-all-btn">Все</button>
+            </div>
+            <div class="releases-grid">
+              <div class="album-card">
+                <div class="album-image">
+                  <img
+                    src="https://picsum.photos/seed/album1/160/160"
+                    alt="Album 1" />
+                  <div class="play-overlay">
+                    <button class="play-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <h3>New Album Title</h3>
+                <p>Artist Name</p>
+              </div>
+              <div class="album-card">
+                <div class="album-image">
+                  <img
+                    src="https://picsum.photos/seed/album2/160/160"
+                    alt="Album 2" />
+                  <div class="play-overlay">
+                    <button class="play-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <h3>Another Album</h3>
+                <p>Different Artist</p>
+              </div>
+              <div class="album-card">
+                <div class="album-image">
+                  <img
+                    src="https://picsum.photos/seed/album3/160/160"
+                    alt="Album 3" />
+                  <div class="play-overlay">
+                    <button class="play-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <h3>Great Hits</h3>
+                <p>Popular Band</p>
+              </div>
+              <div class="album-card">
+                <div class="album-image">
+                  <img
+                    src="https://picsum.photos/seed/album4/160/160"
+                    alt="Album 4" />
+                  <div class="play-overlay">
+                    <button class="play-btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <h3>Fresh Beats</h3>
+                <p>New Artist</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- Player Bar -->
+      <footer class="player-bar">
+        <div class="now-playing">
+          <img src="https://picsum.photos/60" alt="Current Track" />
+          <div class="track-info">
+            <h4>Song Title</h4>
+            <p>Artist Name</p>
+          </div>
+        </div>
+        <div class="player-controls">
+          <div class="control-buttons">
+            <button class="control-btn"><i class="fas fa-random"></i></button>
+            <button class="control-btn">
+              <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="control-btn play">
+              <i class="fas fa-play"></i>
+            </button>
+            <button class="control-btn">
+              <i class="fas fa-step-forward"></i>
+            </button>
+            <button class="control-btn"><i class="fas fa-redo"></i></button>
+          </div>
+          <div class="progress-container">
+            <span class="time current"></span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span class="time total"></span>
+          </div>
+        </div>
+        <div class="volume-controls">
+          <button class="control-btn"><i class="far fa-heart"></i></button>
+          <button class="control-btn"><i class="fas fa-list"></i></button>
+          <button class="control-btn"><i class="fas fa-volume-up"></i></button>
+          <div class="volume-bar">
+            <div class="volume-level"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
