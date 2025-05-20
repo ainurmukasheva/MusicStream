@@ -1929,3 +1929,28 @@ canvas {
 .logout-btn:hover {
   color: #ff4e4e;
 }
+
+.bio-list {
+  counter-reset: item;
+  list-style: none;
+  margin-top: 1em;
+  color: var(--text-secondary);
+}
+
+.bio-list li {
+  position: relative;
+  margin: 0.5em 0;
+  padding-left: 2em;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.bio-list li::before {
+  counter-increment: item;
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: var(--accent-color);
+}
